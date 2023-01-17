@@ -308,15 +308,6 @@ template {
   display: none;
 }
 
-html {
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 div#bodyWrapper {
   display: grid;
   grid-template-areas: "nav" "header" "main" "footer";
