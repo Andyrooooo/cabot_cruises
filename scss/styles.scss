@@ -1,0 +1,13 @@
+@import "normalize";
+
+@import "variables";
+
+@import "small";
+
+@media only screen and (min-width: 35rem) {
+    @import "medium";
+} // media query for medium screen break point
+
+@media only screen and (min-width: 60rem) {
+    @import "large";
+} // media query for large screen break point
