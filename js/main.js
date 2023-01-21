@@ -1,3 +1,6 @@
+
+
+/* ------------------------------------------- button toggle for hamburger menu in mobile and tablet ---------------------------------------------------- */
 const list = document.querySelector('.list')
 const x = document.querySelector('.x')
 const hamburger = document.querySelector('.hamburger')
@@ -12,3 +15,16 @@ const openList = function () {
 }
 
 hamButton.addEventListener('click', openList)
+
+/* -------------------------------------------- image slider ---------------------------------------------------------------------------------------------- */
+new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+  });

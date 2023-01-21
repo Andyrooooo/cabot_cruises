@@ -1,1 +1,61 @@
-main, header, footer, nav {max-width: 80rem; margin: auto;}
+header, nav, footer, main {
+    max-width: 75rem;
+    margin: auto;
+}
+div#bodyWrapper {
+    display: flex;
+    flex-direction: column;
+    div#navWrapper {order: 2}
+    div#headerWrapper {order: 1}
+    div#mainWrapper {order: 3}
+    div#footerWrapper {order: 4}
+}
+
+/* ---------------------------------------------------- Header section ------------------------------------------------------------ */
+
+/* ---------------------------------------------------- nav section ------------------------------------------------------------ */
+nav {
+    padding-bottom: .9rem;
+    button#hamburgerMenu {
+        padding: 0;
+        margin: 0;
+    }
+
+    form {
+        float: right;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .x {
+        display: none;
+    }
+
+    div.list {
+        display: block;
+        float: left;
+        padding-top: 5px;
+        margin-left: 1%;
+
+        ul#primaryNav {
+            margin-top: 0;
+        }
+
+        ul#primaryNav li {
+            display: inline;
+            padding-bottom: 0;
+
+            a {
+                padding: 5px 10px;
+            }
+            
+            a:hover {
+                border: solid 1px rgb(255, 166, 0, 0.3);
+                border-radius: 5px;
+            }
+        }
+    } 
+}
+
