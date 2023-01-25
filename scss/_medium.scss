@@ -1,11 +1,4 @@
-/* div#bodyWrapper {
-    display: grid;
-    grid-template-areas:
-    "nav"
-    "header"
-    "main"
-    "footer";
-} */
+
 /* ---------------------------------------------------- Header section ------------------------------------------------------------ */
 header {
     padding: .4rem 0 0 0;
@@ -20,4 +13,29 @@ header {
         padding: 0;
         text-decoration: none;
     }
+    }
+
+
+/* ---------------------------------------------------- main section ------------------------------------------------------------ */
+    div#articles {
+        div.article1, div.article2, div.article3, div.article4 {
+        flex-basis: 32%;
+        }
+    }
+
+    div#footerDetails {
+        display: flex;
+        flex-wrap: wrap;
+
+        div#contactInfo, div#newsLetter{
+            flex-basis: 50%;
+        }
+    }
+
+
+
+/* ---------------------------------------------------- footer section ------------------------------------------------------------ */
+    div#linksWrapper {
+        max-width: 60rem;
+        margin: 0 auto;
     }

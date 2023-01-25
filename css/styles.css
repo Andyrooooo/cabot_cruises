@@ -335,11 +335,11 @@ div#bodyWrapper div#mainWrapper {
 div#bodyWrapper div#footerWrapper {
   order: 4;
 }
+div#bodyWrapper div#linksWrapper {
+  order: 5;
+}
 
 /* ---------------------------------------------------- Header section ------------------------------------------------------------ */
-header {
-  background-color: rgb(230, 230, 230);
-}
 header figure.logo {
   margin: 0 0 -1.1rem 1%;
   padding-top: 0.3rem;
@@ -349,15 +349,22 @@ header a {
 }
 
 /* ---------------------------------------------------- nav section This includes the search bar------------------------------------------------------------ */
+div#navWrapper {
+  background-color: #1200ff;
+}
+
 nav {
   padding: 5px 0 8px 0;
-  background-color: grey;
   grid-area: nav;
+  /*  #primaryNav li.parent > a::after {
+       content: "\25BC";
+
+   } */
 }
 nav button#hamburgerMenu {
   margin-left: 0.2%;
   padding-top: 2px;
-  background-color: grey;
+  background-color: #1200ff;
   color: white;
   border: none;
   font-size: 20px;
@@ -370,6 +377,10 @@ nav ul#primaryNav {
   margin-top: 0;
   margin-top: 10px;
 }
+nav ul#primaryNav li:hover ul {
+  display: block;
+  text-align: left;
+}
 nav .hidden {
   display: none;
 }
@@ -377,25 +388,25 @@ nav li {
   padding-bottom: 5px;
 }
 nav li a:hover {
-  border-bottom: 2px solid rgba(255, 166, 0, 0.3);
+  border-bottom: 2px solid rgba(0, 0, 255, 0.3);
 }
 nav li a {
   color: white;
   text-decoration: none;
 }
 
-form {
+form#searchForm {
   float: right;
   margin: 0 1% 0 1%;
 }
-form .search {
+form#searchForm .search {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   border: none;
   margin-right: -5px;
   padding: 5px;
 }
-form .submit {
+form#searchForm .submit {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   border: none;
@@ -421,21 +432,110 @@ main .swiper .swiper-slide img {
 main .swiper span.swiper-pagination-bullet {
   padding: 2px;
 }
-
-/* main.my_slider picture {
-    position: relative;
+main h2 {
+  padding-bottom: 0;
+  margin-bottom: -2rem;
+  margin-left: 1%;
 }
 
-main picture img {
-    display: block;
-    width: 200px;
-    height: 100px;
-} */
-/* ---------------------------------------------------- footer section ------------------------------------------------------------ */
-footer {
+div#articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+div#articles label {
   text-align: center;
-  background-color: grey;
+  display: block;
   color: white;
+  padding: 10px 0;
+}
+div#articles .top {
+  position: relative;
+  z-index: 999;
+  transform: translateY(100%);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+div#articles .bottom {
+  transform: translateY(-112%);
+  /* transform: translateY(-214%); */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+div#articles div.article1, div#articles div.article2, div#articles div.article3, div#articles div.article4 {
+  flex-basis: 48%;
+}
+div#articles img {
+  width: 100%;
+  opacity: 0.75;
+}
+div#articles img:hover {
+  opacity: 1;
+}
+
+/* ---------------------------------------------------- footer section ------------------------------------------------------------ */
+div#footerWrapper {
+  background-color: #1200ff;
+  padding-bottom: 1rem;
+  color: white;
+}
+div#footerWrapper div#footerDetails {
+  padding-left: 1%;
+  padding-right: 1%;
+}
+div#footerWrapper div#footerDetails h3 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+div#footerWrapper div#footerDetails p {
+  margin: 0;
+}
+div#footerWrapper div#footerDetails h2 {
+  margin-bottom: 0;
+}
+div#footerWrapper div#footerDetails a {
+  color: blue;
+  text-decoration: none;
+}
+div#footerWrapper div#newsLetter form input.email {
+  padding: 10px 5px;
+  width: 100%;
+  margin-top: 10px;
+}
+div#footerWrapper div#newsLetter form input.submit {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px 0;
+  background-color: #d0ccff;
+  color: white;
+  border: none;
+  margin-top: 10px;
+  color: black;
+}
+div#footerWrapper div#aboutUs h2 {
+  margin-bottom: 5px;
+}
+div#footerWrapper div#aboutUs p {
+  margin-bottom: 1rem;
+}
+
+div#linksWrapper {
+  max-width: 35rem;
+  margin: 0 auto;
+  text-align: center;
+}
+div#linksWrapper div#socialMedia i {
+  margin: 0.8rem;
+  font-size: 4rem;
+}
+div#linksWrapper div#socialMedia i:hover {
+  color: red;
+}
+div#linksWrapper p {
+  display: block;
+  margin: 0;
+}
+div#linksWrapper p a {
+  color: blue;
+  text-decoration: none;
 }
 
 /*----- Clearfix: Force an Element not to collapse ----*/
@@ -448,14 +548,6 @@ footer {
 /* @import "../slick/slick-theme.scss";
 @import "../slick/slick.scss"; */
 @media only screen and (min-width: 35rem) {
-  /* div#bodyWrapper {
-      display: grid;
-      grid-template-areas:
-      "nav"
-      "header"
-      "main"
-      "footer";
-  } */
   /* ---------------------------------------------------- Header section ------------------------------------------------------------ */
   header {
     padding: 0.4rem 0 0 0;
@@ -471,9 +563,25 @@ footer {
     padding: 0;
     text-decoration: none;
   }
+  /* ---------------------------------------------------- main section ------------------------------------------------------------ */
+  div#articles div.article1, div#articles div.article2, div#articles div.article3, div#articles div.article4 {
+    flex-basis: 32%;
+  }
+  div#footerDetails {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  div#footerDetails div#contactInfo, div#footerDetails div#newsLetter {
+    flex-basis: 50%;
+  }
+  /* ---------------------------------------------------- footer section ------------------------------------------------------------ */
+  div#linksWrapper {
+    max-width: 60rem;
+    margin: 0 auto;
+  }
 }
 @media only screen and (min-width: 60rem) {
-  header, nav, footer, main {
+  header, nav, footer, main, #linksWrapper {
     max-width: 75rem;
     margin: auto;
   }
@@ -492,6 +600,9 @@ footer {
   }
   div#bodyWrapper div#footerWrapper {
     order: 4;
+  }
+  div#bodyWrapper div#linksWrapper {
+    order: 5;
   }
   /* ---------------------------------------------------- Header section ------------------------------------------------------------ */
   /* ---------------------------------------------------- nav section ------------------------------------------------------------ */
@@ -519,10 +630,11 @@ footer {
   }
   nav div.list ul#primaryNav {
     margin-top: 0;
+    display: flex;
   }
   nav div.list ul#primaryNav li {
-    display: inline;
     padding-bottom: 0;
+    text-align: left;
   }
   nav div.list ul#primaryNav li a {
     padding: 5px 10px;
@@ -530,5 +642,15 @@ footer {
   nav div.list ul#primaryNav li a:hover {
     border: solid 1px rgba(255, 166, 0, 0.3);
     border-radius: 5px;
+  }
+  /* ---------------------------------------------------- main section ------------------------------------------------------------ */
+  div#articles div.article1, div#articles div.article2, div#articles div.article3, div#articles div.article4 {
+    flex-basis: 24%;
+  }
+  div#footerDetails {
+    justify-content: space-between;
+  }
+  div#footerDetails div#contactInfo, div#footerDetails div#newsLetter, div#footerDetails div#aboutUs {
+    flex-basis: 32%;
   }
 }/*# sourceMappingURL=styles.css.map */

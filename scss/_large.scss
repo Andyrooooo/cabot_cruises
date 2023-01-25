@@ -1,4 +1,4 @@
-header, nav, footer, main {
+header, nav, footer, main, #linksWrapper {
     max-width: 75rem;
     margin: auto;
 }
@@ -9,6 +9,7 @@ div#bodyWrapper {
     div#headerWrapper {order: 1}
     div#mainWrapper {order: 3}
     div#footerWrapper {order: 4}
+    div#linksWrapper {order: 5}
 }
 
 /* ---------------------------------------------------- Header section ------------------------------------------------------------ */
@@ -41,11 +42,12 @@ nav {
 
         ul#primaryNav {
             margin-top: 0;
+            display: flex;
         }
 
         ul#primaryNav li {
-            display: inline;
             padding-bottom: 0;
+            text-align: left;
 
             a {
                 padding: 5px 10px;
@@ -59,3 +61,18 @@ nav {
     } 
 }
 
+
+/* ---------------------------------------------------- main section ------------------------------------------------------------ */
+div#articles {
+    div.article1, div.article2, div.article3, div.article4 {
+    flex-basis: 24%;
+    }
+}
+
+div#footerDetails {
+    justify-content: space-between;
+
+    div#contactInfo, div#newsLetter, div#aboutUs {
+        flex-basis: 32%;
+    }
+}
