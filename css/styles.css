@@ -578,6 +578,7 @@ div#footerWrapper div#newsLetter form input.email {
   background-color: #006A66;
   border: 1px solid #00d0c8;
   outline: none;
+  color: #FFFDD4;
 }
 div#footerWrapper div#newsLetter .email::-moz-placeholder {
   color: rgba(255, 253, 212, 0.5);

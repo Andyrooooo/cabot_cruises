@@ -290,6 +290,7 @@ div#footerWrapper {
             background-color: $colorOne;
             border: 1px solid lighten($color: $colorOne, $amount: 20%);
             outline: none;
+            color: $colorTwo;
         }
 
         .email::placeholder {
