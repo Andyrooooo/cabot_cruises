@@ -591,6 +591,9 @@ div#footerWrapper div#newsLetter .email::placeholder {
   color: rgba(255, 253, 212, 0.5);
   font-family: roboto;
 }
+div#footerWrapper div#newsLetter .email:focus, div#footerWrapper div#newsLetter .email:active {
+  color: #FFFDD4;
+}
 div#footerWrapper div#newsLetter form input.submit {
   width: 100%;
   border-radius: 5px;

@@ -297,6 +297,10 @@ div#footerWrapper {
             font-family: roboto;
         }
 
+        .email:focus, .email:active {
+            color: $colorTwo;
+            }
+
         form input.submit {
             width: 100%;
             border-radius: 5px;
