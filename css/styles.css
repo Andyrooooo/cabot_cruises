@@ -455,7 +455,7 @@ form#searchForm .submit {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   border: none;
-  padding: 6.75px 15px;
+  padding: 7px 15px;
   background-color: #00d0c8;
 }
 
@@ -773,6 +773,9 @@ div#linksWrapper p a {
   nav form#searchForm .search {
     margin-top: 0;
     margin-bottom: 0.6rem;
+  }
+  nav form#searchForm .submit {
+    padding: 6.75px 15px;
   }
   /* ---------------------------------------------------- main section ------------------------------------------------------------ */
   div#articles div.article1, div#articles div.article2, div#articles div.article3, div#articles div.article4 {
