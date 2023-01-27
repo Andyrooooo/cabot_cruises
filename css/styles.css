@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -391,6 +392,10 @@ nav li a:hover {
 nav ul#primaryNav li ul {
   list-style-type: none;
 }
+nav ul#primaryNav li.agent > a::after {
+  content: "▼";
+  margin-left: 5px;
+}
 nav ul#primaryNav li.agent ul {
   margin-left: 0;
   padding-left: 0;
@@ -706,7 +711,8 @@ div#linksWrapper p a {
   /* ---------------------------------------------------- Header section ------------------------------------------------------------ */
   /* ---------------------------------------------------- nav section ------------------------------------------------------------ */
   nav {
-    padding-bottom: 0.9rem;
+    padding-top: 0.6rem;
+    padding-bottom: 1.2rem;
   }
   nav button#hamburgerMenu {
     padding: 0;
@@ -736,13 +742,10 @@ div#linksWrapper p a {
   }
   nav div.list ul#primaryNav li.agent, nav div.list ul#primaryNav li.cruise, nav div.list ul#primaryNav li.menuList, nav div.list ul#primaryNav li.book {
     padding-top: 0;
-    padding-right: 1rem;
+    padding-right: 0.75rem;
   }
-  nav div.list ul#primaryNav li.agent ul li.child {
-    margin-bottom: 10px;
-  }
-  nav div.list ul#primaryNav li.agent ul li.secondChild {
-    margin-bottom: 15px;
+  nav div.list ul#primaryNav li.agent, nav div.list ul#primaryNav li.cruise, nav div.list ul#primaryNav li.book {
+    padding-left: 0.75rem;
   }
   nav div.list ul#primaryNav li {
     padding-bottom: 0;
@@ -750,6 +753,21 @@ div#linksWrapper p a {
   }
   nav div.list ul#primaryNav li a {
     padding: 5px 10px;
+  }
+  nav div.list ul#primaryNav li.agent ul {
+    position: absolute;
+    z-index: 999;
+    background-color: #006A66;
+    margin: 0.85rem 0 0 0;
+    padding: 0 1rem 9px 1rem;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  nav div.list ul#primaryNav li.agent ul li.child {
+    margin-left: 0;
+  }
+  nav div.list ul#primaryNav li.agent ul li.secondChild {
+    margin-top: 10px;
   }
   /* ---------------------------------------------------- main section ------------------------------------------------------------ */
   div#articles div.article1, div#articles div.article2, div#articles div.article3, div#articles div.article4 {

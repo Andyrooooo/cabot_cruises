@@ -16,7 +16,8 @@ div#bodyWrapper {
 
 /* ---------------------------------------------------- nav section ------------------------------------------------------------ */
 nav {
-    padding-bottom: .9rem;
+    padding-top: .6rem;
+    padding-bottom: 1.2rem;
     button#hamburgerMenu {
         padding: 0;
         margin: 0;
@@ -52,16 +53,14 @@ nav {
         ul#primaryNav {
             li.agent, li.cruise, li.menuList, li.book {
                 padding-top: 0;
-                padding-right: 1rem;
+                padding-right: .75rem;
             }
         }
 
-        ul#primaryNav li.agent ul li.child {
-            margin-bottom: 10px;
-        }
-
-        ul#primaryNav li.agent ul li.secondChild {
-            margin-bottom: 15px;
+        ul#primaryNav {
+            li.agent, li.cruise, li.book {
+                padding-left: .75rem;
+            }
         }
 
         ul#primaryNav li {
@@ -72,6 +71,25 @@ nav {
                 padding: 5px 10px;
             }
         }
+
+        ul#primaryNav li.agent ul {
+            position: absolute;
+            z-index: 999;
+            background-color: $colorOne;
+            margin: .85rem 0 0 0;
+            padding: 0 1rem 9px 1rem;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        ul#primaryNav li.agent ul li.child {
+            margin-left: 0;
+        }
+
+        ul#primaryNav li.agent ul li.secondChild {
+            margin-top: 10px;
+        }
+
     } 
 }
 
