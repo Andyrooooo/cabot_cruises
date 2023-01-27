@@ -424,6 +424,7 @@ form#searchForm {
   margin: 0 1% 0 1%;
 }
 form#searchForm .search {
+  color: #FFFDD4;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   border: none;
@@ -447,9 +448,9 @@ form#searchForm .search::placeholder {
   color: rgba(255, 253, 212, 0.5);
   font-family: roboto;
 }
-form#searchForm .search:focus,
-form#searchForm .search:active {
+form#searchForm .search:focus, form#searchForm .search:active {
   width: 14rem;
+  color: #FFFDD4;
 }
 form#searchForm .submit {
   border-top-right-radius: 5px;

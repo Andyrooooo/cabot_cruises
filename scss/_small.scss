@@ -114,6 +114,7 @@ body {
 
         //search container
         .search{
+        color: $colorTwo;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
         border: none;
@@ -131,9 +132,9 @@ body {
             font-family: roboto;
         }
 
-        .search:focus,
-        .search:active {
+        .search:focus, .search:active {
         width: 14rem;
+        color: $colorTwo;
         }
 
         //submit button
