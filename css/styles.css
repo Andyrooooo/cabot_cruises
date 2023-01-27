@@ -361,7 +361,7 @@ nav button#hamburgerMenu {
   background-color: #006A66;
   color: #FFFDD4;
   border: none;
-  font-size: 20px;
+  font-size: 2rem;
 }
 nav ul#primaryNav {
   padding-left: 0;
@@ -428,7 +428,8 @@ form#searchForm .search {
   border-bottom-left-radius: 5px;
   border: none;
   margin-right: -5px;
-  padding: 4px 5px;
+  margin-top: 5px;
+  padding: 6px 5px;
   background-color: #006A66;
   border: 1px solid #00d0c8;
   width: 6rem;
@@ -454,7 +455,7 @@ form#searchForm .submit {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   border: none;
-  padding: 5px 10px;
+  padding: 6.75px 15px;
   background-color: #00d0c8;
 }
 
@@ -622,7 +623,7 @@ div#linksWrapper {
 }
 div#linksWrapper div#socialMedia i {
   margin: 0.8rem;
-  font-size: 4rem;
+  font-size: 2.5rem;
   color: #006A66;
 }
 div#linksWrapper div#socialMedia i:hover {
@@ -768,6 +769,10 @@ div#linksWrapper p a {
   }
   nav div.list ul#primaryNav li.agent ul li.secondChild {
     margin-top: 10px;
+  }
+  nav form#searchForm .search {
+    margin-top: 0;
+    margin-bottom: 0.6rem;
   }
   /* ---------------------------------------------------- main section ------------------------------------------------------------ */
   div#articles div.article1, div#articles div.article2, div#articles div.article3, div#articles div.article4 {
