@@ -11,6 +11,8 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
 
+    <link rel="stylesheet" href="https://use.typekit.net/ely1kpo.css">
+
     <script src="https://kit.fontawesome.com/e5ff2f4c45.js" crossorigin="anonymous"></script>
 
     <title>Cabot Cruises</title>
@@ -25,8 +27,7 @@
             <img src="images/logo/logo_default2.png" alt="cabot logo" srcset="images/logo/logo1.png 1x, images/logo/logo2.png 2x, images/logo/logo3.png 3x">
           </figure>
 
-          <img>
-          <a href="tel:18005551234" type="phone">1-800-555-1234</a>
+          <a href="tel:18005551234" name="phone" type="phone">1-800-555-1234</a>
         </header>
       </div>
         <!---------------------------------------------------------------------- nav section --------------------------------------------------------------------------->
@@ -52,29 +53,14 @@
           <div class="list hidden">
             <ul id="primaryNav">
             <li class="menuList"><a href="#">Home</a>
-
-            <li class="parent"><a href="#">Cruises</a>
-              <!-- <ul>
-                <li><a href="#">Premium Cruises</a></li>
-                <li><a href="#">Cruise Lines</a></li>
-                <li><a href="#">Locations</a></li>
-              </ul> -->
+            <li class="cruise"><a href="#">Cruises</a></li> 
+            <li class="agent"><a href="#">Agents</a>
+              <ul class="secondList hidden">
+                <li class="child"><a href="#">Meet our Team</a></li>
+                <li class="secondChild"><a href="#">Schedule an Appointment</a></li>
+              </ul>
             </li> 
-
-            <li class="parent"><a href="#">Agents</a>
-              <!-- <ul>
-                <li><a href="#">Meet our Team</a></li>
-                <li><a href="#">Schedule an Appointment</a></li>
-              </ul> -->
-            </li> 
-
-            <li class="parent"><a href="#">Book</a>
-              <!-- <ul>
-                <li><a href="#">Rooms</a></li>
-                <li><a href="#">Packages</a></li>
-                <li><a href="#">Hotel</a></li>
-              </ul> -->
-            </li> 
+            <li class="book"><a href="#">Book</a></li> 
 
             </ul>
           </div>
@@ -194,7 +180,7 @@
           <div id="aboutUs">
             <h2>Why Cabot Cruises</h2>
 
-            <p>Cabot Cruises is a travel agency providing the best cruise 
+            <p class="part1">Cabot Cruises is a travel agency providing the best cruise 
               deals on our online travel website. We can help you with all 
               inclusive vacaMons including discounted cruises.</p>
 

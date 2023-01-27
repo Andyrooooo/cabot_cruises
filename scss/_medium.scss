@@ -1,10 +1,11 @@
 
 /* ---------------------------------------------------- Header section ------------------------------------------------------------ */
 header {
-    padding: .4rem 0 0 0;
+    padding: 0;
     figure.logo {
         padding-bottom: 0;
-        margin-bottom: 0;
+        margin-bottom: -1.3rem;
+        padding-bottom: 0;
     }
     a {
         display: block;
@@ -35,6 +36,11 @@ header {
 
 
 /* ---------------------------------------------------- footer section ------------------------------------------------------------ */
+div#newsLetter {
+    padding-top: .8rem;
+}
+
+
     div#linksWrapper {
         max-width: 60rem;
         margin: 0 auto;

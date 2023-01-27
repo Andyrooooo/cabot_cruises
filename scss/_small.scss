@@ -14,17 +14,11 @@ div#bodyWrapper {
     div#linksWrapper {order: 5}
 }
 
-
-/* ---------------------------------------------------- Header section ------------------------------------------------------------ */
-header {
-    figure.logo {
-        margin: 0 0 -1.1rem 1%;
-        padding-top: .3rem;
-    }
-    a {
-        display: none;
-    }
-    }
+body {
+    font-family: costa, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
 
     /* ---------------------------------------------------- nav section This includes the search bar------------------------------------------------------------ */
     div#navWrapper { background-color: $colorOne;}
@@ -38,10 +32,11 @@ header {
             margin-left: .2%;
             padding-top: 2px;
             background-color: $colorOne;
-            color:white;
+            color:$colorTwo;
             border: none;
             font-size: 20px;
         }
+
         ul#primaryNav {
             padding-left: 0;
             margin-bottom: 0;
@@ -51,27 +46,60 @@ header {
             margin-top: 10px;
         }
 
-        ul#primaryNav li:hover ul {
-            display: block;
-            text-align: left;
-        }
-
-       /*  #primaryNav li.parent > a::after {
-            content: "\25BC";
-
-        } */
-
         .hidden {display: none;}
 
-        // nav items
-        li {padding-bottom: 5px;}
-        li a:hover {
-            border-bottom: 2px solid rgb(0, 0, 255, 0.3);
+        // ------------------ nav items ---------------------------------
+        li.cruise, li.agent, li.menuList {
+            padding-bottom: 5px;
+            padding-top: 5px;
         }
+
+        li.book {
+            padding-bottom: 5px;
+            padding-top: 5px;
+        }
+
         li a {
-        color: white;
+        color: $colorTwo;
         text-decoration: none;
         }
+
+        li a:hover {
+            border-bottom: 1px solid rgb(255, 253, 212, 0.7);
+        } 
+// ------------------ nav second level items ---------------------------------
+        ul#primaryNav li ul {
+            list-style-type: none;
+        }
+
+        ul#primaryNav li.agent ul {
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        ul#primaryNav li ul li a {
+            font-size: 0.8rem;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        ul#primaryNav li.agent ul li a:hover {
+            border-bottom: 1px solid rgb(255, 253, 212, 0.7);
+        }
+
+        ul#primaryNav li.agent ul li.child {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        ul#primaryNav li.agent ul li.secondChild {
+            margin-bottom: 5px;
+        }
+
+        ul#primaryNav li ul.hidden {
+            display: none;
+        }
+
     }
 
     // search bar
@@ -85,7 +113,21 @@ header {
         border-bottom-left-radius: 5px;
         border: none;
         margin-right: -5px;
-        padding: 5px;
+        padding: 4px 5px;
+        background-color: $colorOne;
+        border: 1px solid lighten($color: $colorOne, $amount: 20%);
+        width: 6rem;
+        outline: none;
+        }
+
+        .search::placeholder {
+            color: rgb(255, 253, 212, 0.5);
+            font-family: roboto;
+        }
+
+        .search:focus,
+        .search:active {
+        width: 14rem;
         }
 
         //submit button
@@ -94,9 +136,23 @@ header {
             border-bottom-right-radius: 5px;
             border: none;
             padding: 5px 10px;
-            background-color: black;
+            background-color: lighten($color: $colorOne, $amount: 20%);
         } 
     }
+
+
+/* ---------------------------------------------------- Header section ------------------------------------------------------------ */
+header {
+    figure.logo {
+        margin: 1rem 0 -0.1rem 1%;
+        padding-top: .3rem;
+    }
+    a {
+        display: none;
+        color: $colorOne;
+        font-family: roboto;
+    }
+}
 
 /* ---------------------------------------------------- main section ------------------------------------------------------------ */
 main {
@@ -117,6 +173,7 @@ main {
 
         span.swiper-pagination-bullet {
             padding: 2px;
+            background-color: $colorOne;
         }
     }
     
@@ -125,6 +182,7 @@ main {
         padding-bottom: 0;
         margin-bottom: -2rem;
         margin-left: 1%;
+        color: $colorOne
     }
     
 }
@@ -141,7 +199,7 @@ div#articles {
     label {
         text-align: center;
         display: block;
-        color: white;
+        color: $colorTwo;
         padding: 10px 0;
     }
 
@@ -149,13 +207,13 @@ div#articles {
         position: relative;
         z-index: 999;
         transform: translateY(100%);
-        background-color:rgba(0, 0, 0, 0.5);
+        background-color:rgb(0, 106, 102, 0.5);
     }
 
     .bottom {
-        transform: translateY(-112%);
+        transform: translateY(-111%);
         /* transform: translateY(-214%); */
-        background-color:rgba(0, 0, 0, 0.5);
+        background-color:rgb(0, 106, 102, 0.5);
     }
 
     div.article1, div.article2, div.article3, div.article4 {
@@ -180,45 +238,87 @@ div#footerWrapper {
         padding-left: 1%;
         padding-right: 1%;
 
-        h3 {
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        p {
-            margin: 0;
-        }
-
-        h2 {
-            margin-bottom: 0;
-        }
-        a {
-            color: blue;
-            text-decoration: none;
+        div#contactInfo {
+            h3 {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                color: $colorTwo;
+            }
+            p {
+                margin: 0;
+                color: $colorTwo;
+                font-family: roboto;
+            }
+    
+            h2 {
+                margin-bottom: 0;
+                color: $colorTwo;
+            }
+            a {
+                color: darken($color: $colorTwo, $amount: 50%);
+                text-decoration: none;
+                font-family: roboto;
+            }
         }
     }
 
     div#newsLetter {
+        margin-top: 2rem;
+
+        h2 {
+            margin-bottom: 0;
+            color: $colorTwo;
+        }
+
+        p {
+            color: $colorTwo;
+            margin: 0;
+            font-family: roboto;
+        }
+
         form input.email {
             padding: 10px 5px;
             width: 100%;
             margin-top: 10px;
+            background-color: $colorOne;
+            border: 1px solid lighten($color: $colorOne, $amount: 20%);
+            outline: none;
         }
+
+        .email::placeholder {
+            color: rgb(255, 253, 212, 0.5);
+            font-family: roboto;
+        }
+
         form input.submit {
             width: 100%;
-            border-radius: 10px;
+            border-radius: 5px;
             padding: 10px 0;
-            background-color: lighten($color: $colorOne, $amount: 40%);
+            background-color: lighten($color: $colorOne, $amount: 20%);
             color: white;
             border: none;
             margin-top: 10px;
-            color: black;
+            color: $colorTwo;
         }
     }
 
     div#aboutUs {
-        h2 {margin-bottom: 5px;}
+        margin-top: 2rem;
 
-        p {margin-bottom: 1rem;}
+        p.part1 {
+            margin-top: 0;
+        }
+
+        h2 {
+            margin-bottom: 0;
+            color: $colorTwo;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: $colorTwo;
+            font-family: roboto;
+        }
     }
 
 }
@@ -230,18 +330,21 @@ div#linksWrapper {
     text-align: center;
 
     div#socialMedia {
+
         i {
             margin: .8rem;
             font-size: 4rem;
+            color: $colorOne;
         }
-        i:hover {color: red;}
+        i:hover {color: darken($color: $colorOne, $amount: 10%);}
     }
 
     p {
+        color: $colorOne;
         display: block;
         margin: 0;
         a {
-            color: blue;
+            color: darken($color: $colorOne, $amount: 20%);
             text-decoration: none;
         }
     }

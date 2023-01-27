@@ -1,10 +1,20 @@
 
 
+/* ------------------------------------------- button toggle for second list ---------------------------------------------------- */
+const agent = document.querySelector('.agent')
+const secondList = document.querySelector('.secondList')
+
+const openSecond = function () {
+  secondList.classList.toggle('hidden')
+}
+
+agent.addEventListener('click', openSecond)
+
+
 /* ------------------------------------------- button toggle for hamburger menu in mobile and tablet ---------------------------------------------------- */
 const list = document.querySelector('.list')
 const x = document.querySelector('.x')
 const hamburger = document.querySelector('.hamburger')
-
 const hamButton = document.querySelector('#hamburgerMenu')
 
 const openList = function () {

@@ -45,17 +45,31 @@ nav {
             display: flex;
         }
 
+        ul#primaryNav {
+            li.agent, li.cruise, li.menuList {border: none;}
+        }
+
+        ul#primaryNav {
+            li.agent, li.cruise, li.menuList, li.book {
+                padding-top: 0;
+                padding-right: 1rem;
+            }
+        }
+
+        ul#primaryNav li.agent ul li.child {
+            margin-bottom: 10px;
+        }
+
+        ul#primaryNav li.agent ul li.secondChild {
+            margin-bottom: 15px;
+        }
+
         ul#primaryNav li {
             padding-bottom: 0;
             text-align: left;
 
             a {
                 padding: 5px 10px;
-            }
-            
-            a:hover {
-                border: solid 1px rgb(255, 166, 0, 0.3);
-                border-radius: 5px;
             }
         }
     } 
@@ -75,4 +89,15 @@ div#footerDetails {
     div#contactInfo, div#newsLetter, div#aboutUs {
         flex-basis: 32%;
     }
+}
+
+/* -------------------------------------------------------- footer section ------------------------------------------------------------- */
+div#newsLetter {
+    h2 {
+        margin-top: 1.2rem;
+    }
+}
+
+div#aboutUs {
+    h2 {margin-top: 1.9rem;}
 }
