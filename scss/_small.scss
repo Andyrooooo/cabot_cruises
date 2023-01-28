@@ -72,10 +72,6 @@ body {
             list-style-type: none;
         }
 
-        ul#primaryNav li.agent > a::after {
-            content: "\25BC";
-            margin-left: 5px;
-        }
 
         ul#primaryNav li.agent ul {
             margin-left: 0;

@@ -1,7 +1,7 @@
 
 
 /* ------------------------------------------- button toggle for second list ---------------------------------------------------- */
-const agent = document.querySelector('.agent')
+const agent = document.querySelector('.arrow')
 const secondList = document.querySelector('.secondList')
 
 const openSecond = function () {
